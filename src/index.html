@@ -7,19 +7,20 @@
   <body>
     <div class="container-fluid">
       <div class="card">
-        <h2>Hungry? Let's make something to eat!</h2>
+        <h1>Hungry? Let's make something to eat!</h >
       </div>
       <form id="recipe-form">
         <div class="row">
           <div class="col-md-11">
             <div id="form-inputs" class="control-group">
             </br>
-              <label for="food-search">Search for a recipe in our virtual recipe box:</label>
-              <input id="food-search" placeholder="ex: salad">
+              <label for="food-search" id="search-text">Search for a recipe in our virtual recipe box:</label>
+              <input id="food-search" placeholder="ex: salad" class="form-control">
+            </br>
               <button type="button" name="button" class="btn btn-info">Hurry, my tummy is growling</button>
               <div class="recipe-output">
                 <h2>Recipe: <span id ="recipe-title"></span></h2>
-
+                <p><span id="recipe"></span></p>
               </div>
             </div>
           </div>
