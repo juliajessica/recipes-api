@@ -1,0 +1,17 @@
+.card h2 {
+  margin-top: 30px;
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  font-family: monospace;
+  color: black;
+}
+
+.recipe-output {
+  background-color: #96acd1;
+  margin-bottom: 200px;
+  overflow: hidden;
+  padding: 5em;
+  margin: 3em;
+  height: 50%;
+}
