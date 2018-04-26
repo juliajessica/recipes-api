@@ -1,18 +1,19 @@
-class Recipe() {
+class Recipes {
   constructor() {
-
   }
 
-  apiMethod() {
+  apiMethod(recipeSearch) {
     return new Promise(function(resolve, reject) {
 
       let recipeRequest = new XMLHttpRequest();
       let url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${recipeSearch}`;
 
       recipeRequest.onload = function() {
+        console.log(recipeRequest);
         if (this.status === 200) {
+          console.log(recipeRequest.response);
           resolve(recipeRequest.response);
-        }else {
+        } else {
           reject(Error(recipeRequest.statusText));
         }
       }
@@ -21,4 +22,4 @@ class Recipe() {
     });
   }
 } // closing class
- export { Recipes };
+export { Recipes };
