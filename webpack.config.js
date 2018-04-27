@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 
 module.exports = {
@@ -23,7 +24,8 @@ module.exports = {
       template: './src/index.html',
       inject: 'body'
     }),
-    new Dotenv()
+    new Dotenv(),
+    new CopyWebpackPlugin([ {from: 'src/img/', to: 'img'} ]),
   ],
   module: {
     rules: [
